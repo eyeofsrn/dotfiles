@@ -1,0 +1,12 @@
+font-family = Hack
+background = #400c09
+background-opacity = 0.7
+background-blur = 10
+mouse-hide-while-typing = true
+cursor-style = bar
+cursor-style-blink = true
+resize-overlay = never
+confirm-close-surface = false
+window-padding-color = extend
+
+keybind = ctrl+f=toggle_fullscreen
