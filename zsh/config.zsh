@@ -22,7 +22,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-[[ -z "${plugins[*]}" ]] && plugins=(git fzf extract)
+[[ -z "${plugins[*]}" ]] && plugins=(git fzf extract colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -42,13 +42,6 @@ export HISTIGNORE="&:[bf]g:c:clear:history:exit:q:pwd:* --help"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-# Use custom `less` colors for `man` pages.
-
-export LESS_TERMCAP_md="$(tput bold 2> /dev/null; tput setaf 2 2> /dev/null)"
-export LESS_TERMCAP_me="$(tput sgr0 2> /dev/null)"
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
 # Make new shells get the history lines from all previous
 # shells instead of the default "last window closed" history.
 
@@ -56,18 +49,7 @@ export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-#alias open="xdg-open"
-alias make="make -j`nproc`"
-alias ninja="ninja -j`nproc`"
-alias n="ninja"
-alias c="clear"
-alias rmpkg="sudo pacman -Rsn"
-alias cleanch="sudo pacman -Scc"
-alias fixpacman="sudo rm /var/lib/pacman/db.lck"
-alias update="sudo pacman -Syu"
+# Set aliases
 alias hx="sudo -E helix"
 
 # Cleanup orphaned packages
