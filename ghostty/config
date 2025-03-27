@@ -9,4 +9,22 @@ resize-overlay = never
 confirm-close-surface = false
 window-padding-color = extend
 
-keybind = ctrl+f=toggle_fullscreen
+keybind = alt+f=toggle_fullscreen
+keybind = alt+m=toggle_maximize
+keybind = alt+q=close_surface
+keybind = alt+e=equalize_splits
+
+keybind = alt+l=goto_split:right
+keybind = alt+h=goto_split:left
+keybind = alt+j=goto_split:down
+keybind = alt+k=goto_split:up
+
+keybind = shift+alt+l=resize_split:right,25
+keybind = shift+alt+h=resize_split:left,25
+keybind = shift+alt+j=resize_split:down,25
+keybind = shift+alt+k=resize_split:up,25
+
+keybind = ctrl+alt+l=new_split:right
+keybind = ctrl+alt+h=new_split:left
+keybind = ctrl+alt+j=new_split:down
+keybind = ctrl+alt+k=new_split:up
