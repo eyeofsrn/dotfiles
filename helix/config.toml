@@ -1,23 +1,15 @@
 theme = "lantern"
 
 [editor]
-# Show currently open buffes, only when more than one exists
 bufferline = "multiple"
-# Highlight all lines with a cursor
 cursorline = true
-# Use relative line numbers
 line-number = "relative"
-# Show a ruler at column 80
 rulers = [80]
-# Force the theme to show colors
 true-color = true
-# Minimum severity to show a diagnostic after the end of a line
 end-of-line-diagnostics = "hint"
 
 [editor.inline-diagnostics]
-# Show inline diagnostics when the cursor is on the line
 cursor-line = "error"
-# Don't expand diagnostics unless the cursor is on the line
 other-lines = "disable"
 
 [editor.cursor-shape]
@@ -30,17 +22,11 @@ character = "|"
 render = true
 
 [editor.lsp]
-# Disable automatically popups of signature parameter help
 auto-signature-help = false
-# Show LSP messages in the status line
 display-messages = true
 
 [editor.statusline]
 left = ["mode", "spinner", "version-control", "file-name"]
-
-[editor.file-picker]
-hidden = false
-max-depth = 1
 
 [keys.normal]
 X = "select_line_above"
