@@ -1,2 +1,2 @@
-inherits = 'merionette'
-'ui.background' = { bg = 'transparent' }
+inherits = "merionette"
+"ui.background" = { bg = "transparent" }
