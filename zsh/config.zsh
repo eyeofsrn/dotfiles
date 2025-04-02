@@ -16,6 +16,9 @@ export HISTCONTROL=ignoreboth
 export HISTIGNORE="&:[bf]g:c:clear:history:exit:q:pwd:* --help"
 export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
+# Quarto path for RStudio
+export PATH="$PATH:/usr/bin/quarto"
+
 # Aliases
 alias hx="sudo -E helix"
 alias ls="lsd --icon never"
