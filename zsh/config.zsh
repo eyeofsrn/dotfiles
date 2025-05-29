@@ -8,7 +8,7 @@ export ZSH="/usr/share/oh-my-zsh"
 DISABLE_MAGIC_FUNCTIONS="true"
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
-[[ -z "${plugins[*]}" ]] && plugins=(git fzf extract colored-man-pages)
+[[ -z "${plugins[*]}" ]] && plugins=(git fzf sudo colored-man-pages)
 source $ZSH/oh-my-zsh.sh
 
 # History settings
@@ -34,11 +34,3 @@ export FZF_BASE=/usr/share/fzf
 
 # Zoxide (smart cd)
 eval "$(zoxide init zsh --cmd cd)"
-
-# Double escape to recall last command
-last_command_recall() {
-  BUFFER=$(fc -ln -1)
-  zle end-of-line
-}
-zle -N last_command_recall
-bindkey '\e\e' last_command_recall
